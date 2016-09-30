@@ -1,0 +1,20 @@
+<h1>Welcome to Full Friends on Full MEAN</h1>
+<div ng-controller='homeController'>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Birthday</th>
+			<th>Show</th>
+			<th>Update</th>
+			<th>Delete</th>
+		</tr>
+		<tr ng-repeat = "friend in friends">
+			<td>{{friend.first_name}} {{friend.last_name}}</td>
+			<td>{{friend.birthday | date:'dd-MM-yyyy'}}</td>
+			<td><button ng-click='showFriend(friend._id)'>Show</button></td>
+			<td><button ng-click='updateFriend(friend._id)'>Update</button></td>
+			<td><button ng-click='deleteFriend(friend._id)'>Delete</button></td>
+		</tr>
+	</table>
+	<button><a href="#/new">Add New Friend</a></button>
+</div>

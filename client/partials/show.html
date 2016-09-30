@@ -1,0 +1,10 @@
+<div ng-controller="showController">
+	<h1>Welcome {{friend.first_name}} {{friend.last_name}}</h1>
+	<ul>
+		<li>First Name: {{friend.first_name}}</li>
+		<li>Last Name: {{friend.last_name}}</li>
+		<li>Birthday: {{friend.birthday | date}}</li>
+		<li>Created At: {{friend.createdAt | date:'short'}}</li>
+	</ul>
+	<button ng-click="goBack()">Go Back</button>
+</div>
